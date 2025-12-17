@@ -1,0 +1,58 @@
+<!-- <header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">Dr. Yogendra Singh Chauhan</h1>
+    <nav class="space-x-6 hidden md:block">
+      <a href="#about" class="text-gray-600 hover:text-blue-600">About</a>
+      <a href="#products" class="text-gray-600 hover:text-blue-600">Products</a>
+      <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+      <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+    </nav>
+  </div>
+</header> -->
+
+<nav class="bg-white shadow-md fixed w-full z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="#" class="text-2xl font-bold text-green-600">Dr. Yogendra Singh Chauhan</a>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 font-medium text-gray-700">
+        <a href="#hero" class="hover:text-green-600">Home</a>
+        <a href="#about" class="hover:text-green-600">About</a>
+        <a href="#services" class="hover:text-green-600">Services</a>
+        <a href="#products" class="hover:text-green-600">Products</a>
+        <a href="#contact" class="hover:text-green-600">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button (click)="toggleMenu()" class="focus:outline-none">
+          <svg *ngIf="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg *ngIf="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div *ngIf="isOpen" class="md:hidden bg-white shadow-lg">
+    <a href="#hero" class="block px-4 py-3 text-gray-700 hover:bg-green-50">Home</a>
+    <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-green-50">About</a>
+    <a href="#services" class="block px-4 py-3 text-gray-700 hover:bg-green-50">Services</a>
+    <a href="#products" class="block px-4 py-3 text-gray-700 hover:bg-green-50">Products</a>
+    <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-green-50">Contact</a>
+  </div>
+</nav>

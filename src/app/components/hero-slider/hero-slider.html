@@ -1,0 +1,53 @@
+<section class="relative bg-gradient-to-r from-green-50 to-blue-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 py-24 text-center">
+
+    <!-- Slides -->
+    <div *ngFor="let slide of slides; let i = index">
+      <div *ngIf="i === currentSlide"
+           class="transition-all duration-700 ease-in-out">
+
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          {{ slide.title }}
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          {{ slide.desc }}
+        </p>
+
+        <div class="flex justify-center gap-4">
+          <button class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+            Book Consultation
+          </button>
+          <button class="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50">
+            View Services
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="absolute inset-y-1/2 left-6">
+      <button (click)="prev()"
+              class="bg-white shadow rounded-full p-3 hover:bg-gray-100">
+        ◀
+      </button>
+    </div>
+
+    <div class="absolute inset-y-1/2 right-6">
+      <button (click)="next()"
+              class="bg-white shadow rounded-full p-3 hover:bg-gray-100">
+        ▶
+      </button>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center mt-10 space-x-3">
+      <span *ngFor="let slide of slides; let i = index"
+            (click)="currentSlide = i"
+            class="w-3 h-3 rounded-full cursor-pointer"
+            [ngClass]="i === currentSlide ? 'bg-green-600' : 'bg-gray-300'">
+      </span>
+    </div>
+
+  </div>
+</section>
